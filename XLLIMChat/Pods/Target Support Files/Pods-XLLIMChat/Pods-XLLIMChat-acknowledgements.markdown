@@ -1,6 +1,10 @@
 # Acknowledgements
 This application makes use of the following third party libraries:
 
+## HyphenateLite
+
+Hyphenate Inc. 2017
+
 ## ReactiveObjC
 
 **Copyright (c) 2012 - 2016, GitHub, Inc.**
