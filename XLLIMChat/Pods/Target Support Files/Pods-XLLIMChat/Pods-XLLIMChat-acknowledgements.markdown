@@ -1,7 +1,7 @@
 # Acknowledgements
 This application makes use of the following third party libraries:
 
-## HyphenateLite
+## Hyphenate
 
 Hyphenate Inc. 2017
 

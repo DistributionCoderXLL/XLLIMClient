@@ -3,8 +3,8 @@ platform :ios, '8.0'
 use_frameworks!
 target 'XLLIMChat' do
 
-# pod 'Hyphenate'
-pod 'HyphenateLite'
+pod 'Hyphenate'
+# pod 'HyphenateLite'
 pod 'XLLTabPage', :path => '../'
 
 end
