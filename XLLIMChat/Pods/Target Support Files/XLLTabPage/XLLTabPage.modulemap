@@ -1,0 +1,6 @@
+framework module XLLTabPage {
+  umbrella header "XLLTabPage-umbrella.h"
+
+  export *
+  module * { export * }
+}

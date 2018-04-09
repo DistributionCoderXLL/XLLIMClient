@@ -1,0 +1,6 @@
+framework module Pods_XLLIMChat {
+  umbrella header "Pods-XLLIMChat-umbrella.h"
+
+  export *
+  module * { export * }
+}
