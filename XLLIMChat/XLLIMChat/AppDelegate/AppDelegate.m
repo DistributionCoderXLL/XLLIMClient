@@ -20,8 +20,8 @@
     // Override point for customization after application launch.
     
     
-//    EMOptions *emOptions = [EMOptions optionsWithAppkey:@"b593771943#xllimchat"];
-//    [[EMClient sharedClient] initializeSDKWithOptions:emOptions];
+    EMOptions *emOptions = [EMOptions optionsWithAppkey:@"b593771943#xllimchat"];
+    [[EMClient sharedClient] initializeSDKWithOptions:emOptions];
     
     self.window.backgroundColor = [UIColor whiteColor];
     UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"LoginAction" bundle:nil];

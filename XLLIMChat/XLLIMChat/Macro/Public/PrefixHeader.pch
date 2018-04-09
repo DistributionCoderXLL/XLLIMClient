@@ -18,6 +18,6 @@
 #import "XLLBaseCell.h"
 #import "XLLBaseView.h"
 #import "NSString+XLL.h"
-//#import <HyphenateLite/HyphenateLite.h>
+#import <Hyphenate/Hyphenate.h>
 
 #endif /* PrefixHeader_pch */
