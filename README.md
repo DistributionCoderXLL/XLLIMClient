@@ -4,11 +4,11 @@
 目前只是手写了几个简单的小功能,后续会慢慢增加功能
 
 **我的模块**涉及到的点包括：
-- 导航栏渐变
-- 使用collectionView自定义布局高效轮播
-- 下拉放大
-- 竖向多scrollView交互
-- collectionView加载控制器view，并模拟重用机制横向滚动。
+> - 导航栏渐变
+> - 使用collectionView自定义布局高效轮播
+> - 下拉放大
+> - 竖向多scrollView交互
+> - collectionView加载控制器view，并模拟重用机制横向滚动。
 
 ![小功能演示1](https://upload-images.jianshu.io/upload_images/5244645-0eb2351822c3472d.gif?imageMogr2/auto-orient/strip)
 
