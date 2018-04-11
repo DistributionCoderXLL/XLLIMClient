@@ -1,0 +1,6 @@
+framework module XLLNetWorkEngine {
+  umbrella header "XLLNetWorkEngine-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -5,6 +5,8 @@ target 'XLLIMChat' do
 
 pod 'Hyphenate'
 # pod 'HyphenateLite'
+pod 'MJExtension'
 pod 'XLLTabPage', :path => '../'
+pod 'XLLNetWorkEngine', :path => '../'
 
 end

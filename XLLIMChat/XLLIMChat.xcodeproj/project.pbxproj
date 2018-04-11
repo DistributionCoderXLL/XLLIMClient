@@ -14,6 +14,11 @@
 		A92B839F20746BC20003553A /* XLLCarouselCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A92B839D20746BC20003553A /* XLLCarouselCell.m */; };
 		A92B83A020746BC20003553A /* XLLCarouselCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A92B839E20746BC20003553A /* XLLCarouselCell.xib */; };
 		A92B83CB2074DDB60003553A /* XLLContactController.m in Sources */ = {isa = PBXBuildFile; fileRef = A92B83C82074DDB60003553A /* XLLContactController.m */; };
+		A9583BBE207DFD690035516F /* XLLBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A9583BBD207DFD690035516F /* XLLBaseModel.m */; };
+		A9583BC2207DFF800035516F /* XLLUserVideoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A9583BC1207DFF800035516F /* XLLUserVideoModel.m */; };
+		A9583BC6207E013E0035516F /* XLLUserVideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A9583BC4207E013E0035516F /* XLLUserVideoCell.m */; };
+		A9583BC7207E013E0035516F /* XLLUserVideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A9583BC5207E013E0035516F /* XLLUserVideoCell.xib */; };
+		A9583BC9207E03A70035516F /* ImageResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A9583BC8207E03A70035516F /* ImageResources.bundle */; };
 		A96CD44A207381AF00B4F762 /* XLLBaseLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = A96CD443207381AE00B4F762 /* XLLBaseLoginController.m */; };
 		A96CD44B207381AF00B4F762 /* XLLLoginController.m in Sources */ = {isa = PBXBuildFile; fileRef = A96CD445207381AE00B4F762 /* XLLLoginController.m */; };
 		A96CD44C207381AF00B4F762 /* XLLRegisterController.m in Sources */ = {isa = PBXBuildFile; fileRef = A96CD447207381AE00B4F762 /* XLLRegisterController.m */; };
@@ -129,6 +134,15 @@
 		A92B839E20746BC20003553A /* XLLCarouselCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XLLCarouselCell.xib; sourceTree = "<group>"; };
 		A92B83C72074DDB60003553A /* XLLContactController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLLContactController.h; sourceTree = "<group>"; };
 		A92B83C82074DDB60003553A /* XLLContactController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLLContactController.m; sourceTree = "<group>"; };
+		A9583BB5207DF8F00035516F /* XLLNetWorkEngine.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = XLLNetWorkEngine.podspec; path = ../../XLLNetWorkEngine.podspec; sourceTree = "<group>"; };
+		A9583BBC207DFD690035516F /* XLLBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XLLBaseModel.h; sourceTree = "<group>"; };
+		A9583BBD207DFD690035516F /* XLLBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XLLBaseModel.m; sourceTree = "<group>"; };
+		A9583BC0207DFF800035516F /* XLLUserVideoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XLLUserVideoModel.h; sourceTree = "<group>"; };
+		A9583BC1207DFF800035516F /* XLLUserVideoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XLLUserVideoModel.m; sourceTree = "<group>"; };
+		A9583BC3207E013E0035516F /* XLLUserVideoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XLLUserVideoCell.h; sourceTree = "<group>"; };
+		A9583BC4207E013E0035516F /* XLLUserVideoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XLLUserVideoCell.m; sourceTree = "<group>"; };
+		A9583BC5207E013E0035516F /* XLLUserVideoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = XLLUserVideoCell.xib; sourceTree = "<group>"; };
+		A9583BC8207E03A70035516F /* ImageResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = ImageResources.bundle; sourceTree = "<group>"; };
 		A96CD442207381AE00B4F762 /* XLLBaseLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLLBaseLoginController.h; sourceTree = "<group>"; };
 		A96CD443207381AE00B4F762 /* XLLBaseLoginController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XLLBaseLoginController.m; sourceTree = "<group>"; };
 		A96CD444207381AE00B4F762 /* XLLLoginController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XLLLoginController.h; sourceTree = "<group>"; };
@@ -241,19 +255,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		A92B838C207463D20003553A /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
 		A92B838D207463D20003553A /* View */ = {
 			isa = PBXGroup;
 			children = (
 				A92B839520746A8F0003553A /* XLLCarousel */,
 				A92B8392207463F30003553A /* XLLUserNavView.h */,
 				A92B8393207463F30003553A /* XLLUserNavView.m */,
+				A9583BC3207E013E0035516F /* XLLUserVideoCell.h */,
+				A9583BC4207E013E0035516F /* XLLUserVideoCell.m */,
+				A9583BC5207E013E0035516F /* XLLUserVideoCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -295,6 +305,24 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		A9583BB9207DFCDE0035516F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A9583BC0207DFF800035516F /* XLLUserVideoModel.h */,
+				A9583BC1207DFF800035516F /* XLLUserVideoModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A9583BBB207DFD5A0035516F /* BaseModel */ = {
+			isa = PBXGroup;
+			children = (
+				A9583BBC207DFD690035516F /* XLLBaseModel.h */,
+				A9583BBD207DFD690035516F /* XLLBaseModel.m */,
+			);
+			path = BaseModel;
+			sourceTree = "<group>";
+		};
 		A96CD441207381AE00B4F762 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -327,6 +355,7 @@
 		A96CD456207391BD00B4F762 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A9583BC8207E03A70035516F /* ImageResources.bundle */,
 				A96CD458207391FD00B4F762 /* register_bg.mp4 */,
 			);
 			path = Resources;
@@ -343,6 +372,7 @@
 		A9AFC7AD207B12230013A876 /* Podspec Metadata */ = {
 			isa = PBXGroup;
 			children = (
+				A9583BB5207DF8F00035516F /* XLLNetWorkEngine.podspec */,
 				A9AFC7B0207B14070013A876 /* XLLTabPage.podspec */,
 				A9AFC7AE207B12580013A876 /* LICENSE */,
 				A9AFC7AF207B12580013A876 /* README.md */,
@@ -390,8 +420,8 @@
 		A9AFC7FD207B48AE0013A876 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				A9583BBB207DFD5A0035516F /* BaseModel */,
 				A9AFC7FE207B48AE0013A876 /* BaseController */,
-				A9AFC807207B48AE0013A876 /* BaseModel */,
 				A9AFC808207B48AE0013A876 /* BaseView */,
 			);
 			path = Base;
@@ -410,13 +440,6 @@
 				A9AFC806207B48AE0013A876 /* XLLTabBarController.m */,
 			);
 			path = BaseController;
-			sourceTree = "<group>";
-		};
-		A9AFC807207B48AE0013A876 /* BaseModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = BaseModel;
 			sourceTree = "<group>";
 		};
 		A9AFC808207B48AE0013A876 /* BaseView */ = {
@@ -545,8 +568,8 @@
 		A9CB1CC02073633F006AC16E /* User */ = {
 			isa = PBXGroup;
 			children = (
+				A9583BB9207DFCDE0035516F /* Model */,
 				A9BB7F16207A17AA00AB250F /* Controller */,
-				A92B838C207463D20003553A /* Model */,
 				A92B838D207463D20003553A /* View */,
 			);
 			path = User;
@@ -701,7 +724,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A96CD4592073929400B4F762 /* register_bg.mp4 in Resources */,
+				A9583BC7207E013E0035516F /* XLLUserVideoCell.xib in Resources */,
 				A9CB1C7C2073620A006AC16E /* LaunchScreen.storyboard in Resources */,
+				A9583BC9207E03A70035516F /* ImageResources.bundle in Resources */,
 				A9CE72A0207366C10030897C /* LoginAction.storyboard in Resources */,
 				A9CB1C792073620A006AC16E /* Assets.xcassets in Resources */,
 				A92B83A020746BC20003553A /* XLLCarouselCell.xib in Resources */,
@@ -726,14 +751,20 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-XLLIMChat/Pods-XLLIMChat-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${PODS_ROOT}/Hyphenate/ios_IM_Hyphenate_sdk_3.3.7/HyphenateFullSDK/Hyphenate.framework",
+				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
+				"${BUILT_PRODUCTS_DIR}/XLLNetWorkEngine/XLLNetWorkEngine.framework",
 				"${BUILT_PRODUCTS_DIR}/XLLTabPage/XLLTabPage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Hyphenate.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJExtension.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLLNetWorkEngine.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/XLLTabPage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -832,9 +863,11 @@
 				A92B83CB2074DDB60003553A /* XLLContactController.m in Sources */,
 				A96CD44C207381AF00B4F762 /* XLLRegisterController.m in Sources */,
 				A9AFC80D207B48AE0013A876 /* XLLBaseController.m in Sources */,
+				A9583BBE207DFD690035516F /* XLLBaseModel.m in Sources */,
 				A9CB1C742073620A006AC16E /* ViewController.m in Sources */,
 				A92B839820746A9D0003553A /* XLLCarouselView.m in Sources */,
 				A9CB1CC620736370006AC16E /* XLLDialogController.m in Sources */,
+				A9583BC6207E013E0035516F /* XLLUserVideoCell.m in Sources */,
 				A9AFC80F207B48AE0013A876 /* XLLNavigationController.m in Sources */,
 				A9AFC7F7207B481E0013A876 /* NSString+XLL.m in Sources */,
 				A96CD44A207381AF00B4F762 /* XLLBaseLoginController.m in Sources */,
@@ -842,6 +875,7 @@
 				A92B839F20746BC20003553A /* XLLCarouselCell.m in Sources */,
 				A9AFC812207B48AE0013A876 /* XLLBaseView.m in Sources */,
 				A9CB1C7F2073620A006AC16E /* main.m in Sources */,
+				A9583BC2207DFF800035516F /* XLLUserVideoModel.m in Sources */,
 				A9BB7F22207A17AB00AB250F /* XLLUserVideoController.m in Sources */,
 				A9AFC810207B48AE0013A876 /* XLLTabBarController.m in Sources */,
 				A96CD455207383C400B4F762 /* XLLBGVideoView.m in Sources */,

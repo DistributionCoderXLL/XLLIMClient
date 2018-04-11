@@ -178,7 +178,19 @@ static NSString *const pageID = @"XLLPageCell";
         self.selectedIndex = indexPath.item;
         [collectionView selectItemAtIndexPath:indexPath animated:YES scrollPosition:UICollectionViewScrollPositionCenteredHorizontally];
         [self.pageCollectionView scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionRight animated:labs(gap)>1?NO:YES];
-        [self didSelectControllerAtIndex:indexPath.item];
+        CADisplayLink *displayLink = [CADisplayLink displayLinkWithTarget:self selector:@selector(didSelectController:)];
+        [displayLink addToRunLoop:[NSRunLoop currentRunLoop] forMode:NSRunLoopCommonModes];
+    }
+}
+
+- (void)didSelectController:(CADisplayLink *)displayLink
+{
+    NSIndexPath *indexPath = [NSIndexPath indexPathForItem:self.selectedIndex inSection:0];
+    UIViewController *baseVC = [self getCachedVCByIndexPath:indexPath];
+    if (baseVC) {
+        [self didSelectControllerAtIndex:self.selectedIndex];
+        [displayLink invalidate];
+        displayLink = nil;
     }
 }
 

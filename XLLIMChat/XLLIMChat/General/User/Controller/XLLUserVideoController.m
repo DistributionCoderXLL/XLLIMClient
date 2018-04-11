@@ -7,32 +7,57 @@
 //
 
 #import "XLLUserVideoController.h"
+#import "XLLUserVideoModel.h"
+#import "XLLUserVideoCell.h"
+#import <XLLNetWorkEngine/XLLNetWorkEngine.h>
 
 @interface XLLUserVideoController ()
+
+@property (nonatomic, strong) NSMutableArray *videoArray;
 
 @end
 
 @implementation XLLUserVideoController
 
+#pragma mark - lazy loading
+- (NSMutableArray *)videoArray
+{
+    if (_videoArray == nil)
+    {
+        _videoArray = [NSMutableArray array];
+    }
+    return _videoArray;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [XLLNetWorkEngine getVideoListSuccess:^(id dataObject) {
+        NSArray *videoArr = dataObject[@"VAP4BFR16"];
+        self.videoArray = [XLLUserVideoModel mj_objectArrayWithKeyValuesArray:videoArr];
+        [self.tableView reloadData];
+        
+    } failure:^(NSError *error) {
+        
+    }];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 5;
+    return self.videoArray.count;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 35.0;
+    return [UIScreen mainScreen].bounds.size.width * 125 / 207.0;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    XLLBaseCell *cell = [XLLBaseCell cell:tableView];
-    cell.textLabel.text = XLLStr(@"%zd", indexPath.row);
+    XLLUserVideoCell *cell = [XLLUserVideoCell xibCell:tableView];
+    XLLUserVideoModel *videoModel = self.videoArray[indexPath.row];
+    cell.videoModel = videoModel;
     return cell;
 }
 
