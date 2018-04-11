@@ -207,12 +207,14 @@ static NSString *const pageID = @"XLLPageCell";
         @strongify(self);
         NSIndexPath *indexPath = [NSIndexPath indexPathForItem:[value.first integerValue] inSection:0];
         UIViewController *baseVC = [self getCachedVCByIndexPath:indexPath];
+        /**
         if (!baseVC)
         {
             Class currentClass = self.pageClassArray[indexPath.item];
             baseVC = [[currentClass alloc] init];
             [self saveCachedVC:baseVC ByIndexPath:indexPath];
         }
+         */
         BOOL scrollEnable = [baseVC isKindOfClass:NSClassFromString(@"XLLBaseTBController")];
         if (!scrollEnable) return [NSNull null];
         id <XLLPageScrollDelegate> baseTBVC = (id <XLLPageScrollDelegate>)baseVC;
