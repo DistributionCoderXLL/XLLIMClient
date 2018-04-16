@@ -55,7 +55,7 @@
                                                 </constraints>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZiD-h3-5it">
                                                 <rect key="frame" x="35" y="224" width="305" height="1"/>
@@ -73,6 +73,9 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="passwordFieldDidChange:" destination="DcD-71-H9l" eventType="editingChanged" id="MEW-db-hv4"/>
+                                                </connections>
                                             </textField>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kIK-PQ-GlN">
                                                 <rect key="frame" x="35" y="294" width="305" height="1"/>
@@ -81,7 +84,7 @@
                                                     <constraint firstAttribute="height" constant="1" id="8Vt-7h-PW7"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" clipsSubviews="YES" alpha="0.90000000000000002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GKf-Lw-ffi">
+                                            <button opaque="NO" clipsSubviews="YES" alpha="0.90000000000000002" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GKf-Lw-ffi">
                                                 <rect key="frame" x="35" y="325" width="305" height="45"/>
                                                 <color key="backgroundColor" red="1" green="0.73725490199999999" blue="0.22352941179999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -90,6 +93,12 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                 <state key="normal" title="登录">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="disabled">
+                                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" red="0.86274509799999999" green="0.86274509799999999" blue="0.86274509799999999" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -162,6 +171,7 @@
                     <navigationItem key="navigationItem" title="登录" id="k9g-FB-w9N"/>
                     <connections>
                         <outlet property="accountField" destination="fGc-U9-SkP" id="FcT-TQ-CXX"/>
+                        <outlet property="loginButton" destination="GKf-Lw-ffi" id="mgX-eh-6ee"/>
                         <outlet property="passwordField" destination="ndN-oR-Ee9" id="Ueb-9z-oLW"/>
                         <outlet property="videoView" destination="aHi-iy-G03" id="Ymp-SE-rw1"/>
                     </connections>
@@ -254,6 +264,9 @@
                                                 <state key="normal" title="注册">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="registerBtnClick:" destination="ZPx-FS-kPR" eventType="touchUpInside" id="koH-SR-nuN"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -303,6 +316,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="注册" id="Jld-OO-ATy"/>
+                    <connections>
+                        <outlet property="accountField" destination="XM2-ED-Irm" id="4Dq-Gc-WqK"/>
+                        <outlet property="passwordField" destination="jjc-MN-Qw4" id="pKF-7u-soy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LxR-d6-0fD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

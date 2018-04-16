@@ -10,6 +10,9 @@
 
 @interface XLLRegisterController ()
 
+@property (weak, nonatomic) IBOutlet UITextField *accountField;
+@property (weak, nonatomic) IBOutlet UITextField *passwordField;
+
 @end
 
 @implementation XLLRegisterController
@@ -30,6 +33,15 @@
 - (void)backBtnClick
 {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (IBAction)registerBtnClick:(id)sender {
+    
+    EMError *error = [[EMClient sharedClient] registerWithUsername:self.accountField.text password:self.passwordField.text];
+    if (!error)
+    {
+        //进入tabbar
+    }
 }
 
 - (void)didReceiveMemoryWarning {

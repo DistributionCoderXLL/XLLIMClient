@@ -10,8 +10,8 @@
 #import <UIKit/UIKit.h>
 
 UIKIT_EXTERN NSString *const kNetWorkServiceAddress;
-/** 子控制器滚动通知 */
-UIKIT_EXTERN NSNotificationName const XLLSubScrollNotification;
+/** appKey存储关键字 */
+UIKIT_EXTERN NSString *const XLLIdentifyAppKey;
 
 @interface GlobalConst : NSObject
 

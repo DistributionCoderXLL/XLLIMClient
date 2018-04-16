@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "XLLTabBarController.h"
+#import "XLLSDKConfig.h"
 
 @interface AppDelegate ()
 
@@ -19,9 +20,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    
-    EMOptions *emOptions = [EMOptions optionsWithAppkey:@"b593771943#xllimchat"];
-    [[EMClient sharedClient] initializeSDKWithOptions:emOptions];
+    //初始化SDK
+    [XLLSDKConfig initializeSDK];
     
     self.window.backgroundColor = [UIColor whiteColor];
     UIStoryboard *storyBoard = [UIStoryboard storyboardWithName:@"LoginAction" bundle:nil];

@@ -12,6 +12,7 @@
 #import "XLLUserNavView.h"
 #import "XLLCarouselView.h"
 #import "UIImage+XLL.h"
+#import "UIView+XLLRefresh.h"
 
 #define XLLCarouselHeight 170.0
 
@@ -47,6 +48,7 @@
     // Do any additional setup after loading the view.
     
     [self setupSubViews];
+    [self setupRefreshView];
     [self setupRACSingle];
 }
 
@@ -67,6 +69,17 @@
         } else {
             self.pageScrollView.contentOffset = CGPointMake(0, XLLCarouselHeight - 64);
         }
+    }];
+}
+
+- (void)setupRefreshView
+{
+    __weak typeof(self)weakSelf = self;
+    [self.view refreshWithScrollView:self.pageScrollView refreshBlock:^{
+        
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [weakSelf.view endXLLRefresh];
+        });
     }];
 }
 
