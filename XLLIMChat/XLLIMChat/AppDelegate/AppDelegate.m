@@ -20,7 +20,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    //初始化SDK-新功能
+    //初始化SDK-新功能02
     [XLLSDKConfig initializeSDK];
     
     self.window.backgroundColor = [UIColor whiteColor];
