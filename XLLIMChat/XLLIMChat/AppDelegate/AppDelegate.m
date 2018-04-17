@@ -21,6 +21,7 @@
     // Override point for customization after application launch.
     
     //初始化SDK-新功能03..
+    //不错
     [XLLSDKConfig initializeSDK];
     
     self.window.backgroundColor = [UIColor whiteColor];
