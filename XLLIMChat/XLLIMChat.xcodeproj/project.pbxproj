@@ -668,7 +668,6 @@
 				A9CB1C692073620A006AC16E /* Frameworks */,
 				A9CB1C6A2073620A006AC16E /* Resources */,
 				6B90AFB12F4ADCD382039929 /* [CP] Embed Pods Frameworks */,
-				E928DBE551B9C93DBA2C7D3D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -816,7 +815,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-XLLIMChat/Pods-XLLIMChat-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
-				"${PODS_ROOT}/Hyphenate/ios_IM_Hyphenate_sdk_3.3.7/HyphenateFullSDK/Hyphenate.framework",
+				"${PODS_ROOT}/Hyphenate/iOS_IM_SDK_V3.4.0/HyphenateFullSDK/Hyphenate.framework",
 				"${BUILT_PRODUCTS_DIR}/MJExtension/MJExtension.framework",
 				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
 				"${BUILT_PRODUCTS_DIR}/XLLNetWorkEngine/XLLNetWorkEngine.framework",
@@ -834,21 +833,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XLLIMChat/Pods-XLLIMChat-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E928DBE551B9C93DBA2C7D3D /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-XLLIMChat/Pods-XLLIMChat-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FA47142F4E29F5045740EE9F /* [CP] Check Pods Manifest.lock */ = {
